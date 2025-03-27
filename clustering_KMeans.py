@@ -71,6 +71,10 @@ print(df_final_clusters.head())  # 查看最终结果
 df_plot = df[['测量点号', 'A相电压', 'A相电流']].drop_duplicates()
 df_plot = df_plot.merge(df_final_clusters, on='测量点号')
 
+import matplotlib
+matplotlib.rcParams['font.family'] = 'SimHei'        # 黑体 
+matplotlib.rcParams['axes.unicode_minus'] = False    # 让负号正常显示
+
 plt.figure(figsize=(8,6))
 sns.scatterplot(data=df_plot, x='A相电压', y='A相电流', hue='最终类别', palette='viridis')
 plt.xlabel('A相电压')
