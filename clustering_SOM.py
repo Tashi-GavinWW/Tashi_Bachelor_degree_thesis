@@ -13,7 +13,7 @@ matplotlib.rcParams['font.family'] = 'SimHei'
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 # ==== 读取数据 =========
-file_path = r"U:\Py_code\py_clustering\data_transformer_one_10_08\transformer_01_10_08.xlsx"
+file_path = r"U:\Py_code\py_clustering\data_transformer_one_10_08\transformer.xlsx"
 output_dir = r"U:\Py_code\py_clustering\py_clustering_SOM\results"
 os.makedirs(output_dir, exist_ok=True)
 
@@ -28,7 +28,7 @@ print(f"共有 {len(grouped_dict)} 组数据")
 # ===== 使用SOM+KMeans聚类 ======
 point_cluster_history = {}
 
-som_rows, som_cols = 3, 3       # SOM 网格尺寸（建议3×3）
+som_rows, som_cols = 3, 3       # SOM 网格尺寸
 final_cluster_num = 3           # 最终目标聚为3类
 
 for timestamp, df_selected in grouped_dict.items():

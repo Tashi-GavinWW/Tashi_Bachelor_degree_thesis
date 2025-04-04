@@ -7,10 +7,10 @@ from collections import Counter
 import os
 
 # ==========  读取 & 预处理数据 ==========
-file_path = r"U:\Py_code\py_clustering\data_transformer_one_10_08\transformer_01_10_08.xlsx"
+file_path = r"U:\Py_code\py_clustering\data_transformer_one_10_08\transformer.xlsx"
 
 # 设定存储路径
-output_dir = r"U:\Py_code\py_clustering\results"
+output_dir = r"U:\Py_code\py_clustering\py_clustering_KMeans\results"
 os.makedirs(output_dir, exist_ok=True)  # 确保目录存在
 
 df = pd.read_excel(file_path)

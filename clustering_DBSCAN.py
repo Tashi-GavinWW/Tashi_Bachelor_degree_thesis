@@ -8,10 +8,10 @@ import os
 
 # ======= 读取 & 处理数据 ======
 # 文件读取路径
-file_path = r"U:\Py_code\py_clustering\data_transformer_one_10_08\transformer_01_10_08.xlsx"
+file_path = r"U:\Py_code\py_clustering\data_transformer_one_10_08\transformer.xlsx"
 
 # 设定存储路径
-output_dir = r"U:\Py_code\py_clustering_Kmeans\results"
+output_dir = r"U:\Py_code\py_clustering\py_clustering_DBSCAN\results"
 os.makedirs(output_dir, exist_ok=True)  # 确保目录存在
 
 df = pd.read_excel(file_path)
@@ -77,7 +77,7 @@ plt.figure(figsize=(8,6))
 sns.scatterplot(data=df_plot, x='A相电压', y='A相电流', hue='最终类别', palette='Set2', style='最终类别')
 plt.xlabel('A相电压')
 plt.ylabel('A相电流')
-plt.title('最终测量点聚类结果（DBSCAN, 基于 96 组）')
+plt.title('最终测量点聚类结果（DBSCAN, 基于 480 组 （台区一全部数据））')
 
 plot_path = os.path.join(output_dir, "final_cluster_plot_dbscan.png")
 plt.savefig(plot_path)
